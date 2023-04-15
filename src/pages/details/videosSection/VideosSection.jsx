@@ -21,7 +21,7 @@ const VideosSection = ({ data, loading }) => {
         );
     };
 
-    return (
+    return (data?.results.length &&
         <div className="videosSection">
             <ContentWrapper>
                 <div className="sectionHeading">Official Videos</div>

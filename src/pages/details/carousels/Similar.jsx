@@ -7,8 +7,8 @@ const Similar = ({ mediaType, id }) => {
     const { data, loading, error } = useFetch(`/${mediaType}/${id}/similar`);
 
     const title = mediaType === "tv" ? "Similar TV Shows" : "Similar Movies";
-
-    return (
+    
+    return ( data?.results.length &&
         <Carousel
             title={title}
             data={data?.results}
